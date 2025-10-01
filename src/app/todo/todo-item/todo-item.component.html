@@ -1,0 +1,13 @@
+<div class="bg-light px-2 py-2 rounded-pill d-flex justify-content-between align-items-center">
+    <h6 class="mb-0" [ngClass]="{'text-decoration-line-through':todo().isComplete}">
+        {{todo().title}}
+    </h6>
+    <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-danger h-30px w-30px rounded-circle p-0" (click)="removeTodo(todo().id)">
+            <i class="bi bi-x"></i>
+        </button>
+        <button class="btn btn-outline-success h-30px w-30px rounded-circle p-0" (click)="markAsComplete(todo())">
+            <i class="bi bi-check2"></i>
+        </button>
+    </div>
+</div>

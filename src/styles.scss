@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+// Main brand colors
+// $primary: #6EC1E4; // Soft blue for main actions
+// $secondary: #F5F5F5; // Light gray for cards & surfaces
+// $success: #8DD7A8; // Mint green for completed tasks
+// $info: #A0D6FF; // Light cyan for info messages
+// $warning: #FFD580; // Soft orange for warnings
+// $danger: #F7A49B; // Soft coral for errors
+// $light: #FFFFFF; // White
+// $dark: #4A4A4A; // Dark gray text
+// $body-bg: #FFFDF9; // Page background
+// $body-color: #4A4A4A; // Default text color
+
+// // Additional accents / UI elements
+// $accent-1: #C1F0E7; // Pale teal for highlights
+// $accent-2: #FDE2F3; // Soft pink for badges or highlights
+// $accent-3: #E6F7FF; // Very light blue for input backgrounds
+// $muted: #B0B0B0; // Muted text or secondary info
+
+// // Hover / focus states
+// $primary-hover: darken($primary, 10%); // Slightly darker blue
+// $success-hover: darken($success, 10%); // Darker green
+// $danger-hover: darken($danger, 10%); // Darker coral
+// $warning-hover: darken($warning, 10%); // Darker orange
+
+
+@import 'bootstrap/scss/bootstrap';
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+/* Importing Bootstrap SCSS file. */
+
+@for $i from 10 through 50 {
+  .h-#{$i}px {
+    height: #{$i}px;
+  }
+
+  .w-#{$i}px {
+    width: #{$i}px;
+  }
+}
