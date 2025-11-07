@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import {
   AbstractControl,
   FormControl,
@@ -18,7 +18,8 @@ import { AuthService } from '../auth.service';
 })
 export class SignupComponent implements OnInit {
   public signupForm!: FormGroup;
-  private authService = inject(AuthService)
+  private authService = inject(AuthService);
+  private router = inject(Router)
 
   ngOnInit(): void {
     this.signupForm = new FormGroup(
@@ -42,7 +43,7 @@ export class SignupComponent implements OnInit {
     if(this.signupForm.invalid) return;
     const { email, password} = this.signupForm.value;
     this.authService.signup({email,password}).subscribe({
-      next:(res) => console.log(res),
+      next:(res) => this.router.navigate(['todos']),
       error:(err) => console.error(err)
     })
   }
